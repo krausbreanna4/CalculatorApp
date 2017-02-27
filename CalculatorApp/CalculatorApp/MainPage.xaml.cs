@@ -230,7 +230,7 @@ namespace CalculatorApp
                 case '/':
                     if (operand_2 == 0)
                     {
-                        Output.Text = "Делить на ноль невозможно";
+                        Output.Text = "Divide by zero is impossible";
                         error = 1;
                         break;
                     }
