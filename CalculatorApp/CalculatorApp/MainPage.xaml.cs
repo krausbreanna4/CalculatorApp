@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 using Xamarin.Forms;
 
-namespace calc
+namespace CalculatorApp
 {
     public partial class MainPage : ContentPage
     {
