@@ -27,7 +27,7 @@ namespace CalculatorApp
                 }
             };
 
-            MainPage = CalcContent();
+            MainPage = new CalcContent();
         }
 
 
