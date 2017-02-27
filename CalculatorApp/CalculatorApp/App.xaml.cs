@@ -11,13 +11,7 @@ namespace CalculatorApp
     {
         public App()
         {
-            // The root page of your application
-            var content = new ContentPage
-            {
-
-            };
-
-            MainPage = new CalcContent();
+            MainPage = new MainPage();
         }
 
 
