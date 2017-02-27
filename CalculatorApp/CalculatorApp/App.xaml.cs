@@ -11,10 +11,25 @@ namespace CalculatorApp
     {
         public App()
         {
-            InitializeComponent();
+            // The root page of your application
+            var content = new ContentPage
+            {
+                Title = "CalculatorApp",
+                Content = new StackLayout
+                {
+                    VerticalOptions = LayoutOptions.Center,
+                    Children = {
+                        new Label {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Text = "Welcome to Xamarin Forms!"
+                        }
+                    }
+                }
+            };
 
-            MainPage = new CalculatorApp.MainPage();
+            MainPage = CalcContent();
         }
+
 
         protected override void OnStart()
         {
