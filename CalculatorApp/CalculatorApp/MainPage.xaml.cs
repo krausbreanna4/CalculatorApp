@@ -23,6 +23,7 @@ namespace CalculatorApp
             Output.Text = "0";
         }
 
+        //Click event for delete button
         private void OnButtonClicked_backspace(object sender, System.EventArgs e)
         {
             if (error == 1)
@@ -43,6 +44,7 @@ namespace CalculatorApp
             Output.Text = Output.Text.Remove(Output.Text.Length - 1, 1);
         }
 
+        //Click event for plus/minus button
         private void OnButtonClicked_plus_minus(object sender, System.EventArgs e)
         {
             if (error == 1)
@@ -59,6 +61,7 @@ namespace CalculatorApp
         }
 
 
+        //Click event for number 7 button
         private void OnButtonClicked_7(object sender, System.EventArgs e)
         {
             if (error == 1)
@@ -73,6 +76,7 @@ namespace CalculatorApp
             else
                 Output.Text += "7";
         }
+        //Click event for number 8 button
         private void OnButtonClicked_8(object sender, System.EventArgs e)
         {
             if (error == 1)
@@ -85,6 +89,7 @@ namespace CalculatorApp
             else
                 Output.Text += "8";
         }
+        //click event for number 9
         private void OnButtonClicked_9(object sender, System.EventArgs e)
         {
             if (error == 1)
@@ -145,6 +150,8 @@ namespace CalculatorApp
             else
                 Output.Text += "6";
         }
+
+        //click event for mulitplication
         private void OnButtonClicked_mul(object sender, System.EventArgs e)
         {
             if (error == 1)
@@ -193,6 +200,7 @@ namespace CalculatorApp
             else
                 Output.Text += "3";
         }
+        //click event for subtraction
         private void OnButtonClicked_minus(object sender, System.EventArgs e)
         {
             if (error == 1)

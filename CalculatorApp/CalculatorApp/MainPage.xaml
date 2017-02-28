@@ -8,7 +8,7 @@
 
 
   <Grid x:Name="LayoutRoot">
-    <Grid.RowDefinitions>
+    <Grid.RowDefinitions> <!-- Grid for rows -->
       <RowDefinition Height="1.5*" />
       <RowDefinition Height="*" />
       <RowDefinition Height="*" />
@@ -16,7 +16,7 @@
       <RowDefinition Height="*" />
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
-    <Grid.ColumnDefinitions>
+    <Grid.ColumnDefinitions> <!-- Grid for columns -->
       <ColumnDefinition Width="*" />
       <ColumnDefinition Width="*" />
       <ColumnDefinition Width="*" />
@@ -30,28 +30,28 @@
     </ContentView>
 
 
-    <Button Text="DEL" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Clicked="OnButtonClicked_backspace" />
-    <Button Text="ENTER" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="2" Clicked="OnButtonClicked_enter" />
+    <Button Text="DEL" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Clicked="OnButtonClicked_backspace" /> <!-- Delete button placement -->
+    <Button Text="ENTER" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="2" Clicked="OnButtonClicked_enter" /> <!-- Enter button placement -->
 
-    <Button Text = "+" Grid.Row="2" Grid.Column="0" Clicked="OnButtonClicked_plus" />
-    <Button Text = "7" Grid.Row="2" Grid.Column="1" Clicked="OnButtonClicked_7" />
-    <Button Text = "8" Grid.Row="2" Grid.Column="2" Clicked="OnButtonClicked_8" />
-    <Button Text = "9" Grid.Row="2" Grid.Column="3" Clicked="OnButtonClicked_9" />
+    <Button Text = "+" Grid.Row="2" Grid.Column="0" Clicked="OnButtonClicked_plus" /> <!-- Addition button placement -->
+    <Button Text = "7" Grid.Row="2" Grid.Column="1" Clicked="OnButtonClicked_7" /> <!-- Number 7 button placement -->
+    <Button Text = "8" Grid.Row="2" Grid.Column="2" Clicked="OnButtonClicked_8" /> <!-- Number 8 button placement -->
+    <Button Text = "9" Grid.Row="2" Grid.Column="3" Clicked="OnButtonClicked_9" /> <!-- Number 9 button placement -->
 
-    <Button Text = "-" Grid.Row="3" Grid.Column="0" Clicked="OnButtonClicked_minus" />
-    <Button Text = "4" Grid.Row="3" Grid.Column="1" Clicked="OnButtonClicked_4" />
-    <Button Text = "5" Grid.Row="3" Grid.Column="2" Clicked="OnButtonClicked_5" />
-    <Button Text = "6" Grid.Row="3" Grid.Column="3" Clicked="OnButtonClicked_6" />
+    <Button Text = "-" Grid.Row="3" Grid.Column="0" Clicked="OnButtonClicked_minus" /> <!-- Subtraction button placement -->
+    <Button Text = "4" Grid.Row="3" Grid.Column="1" Clicked="OnButtonClicked_4" /> <!-- Number 4 button placement -->
+    <Button Text = "5" Grid.Row="3" Grid.Column="2" Clicked="OnButtonClicked_5" /> <!-- Number 5 button placement -->
+    <Button Text = "6" Grid.Row="3" Grid.Column="3" Clicked="OnButtonClicked_6" /> <!-- Number 6 button placement -->
 
-    <Button Text = "*" Grid.Row="4" Grid.Column="0" Clicked="OnButtonClicked_mul" />
-    <Button Text = "1" Grid.Row="4" Grid.Column="1" Clicked="OnButtonClicked_1" />
-    <Button Text = "2" Grid.Row="4" Grid.Column="2" Clicked="OnButtonClicked_2" />
-    <Button Text = "3" Grid.Row="4" Grid.Column="3" Clicked="OnButtonClicked_3" />
+    <Button Text = "*" Grid.Row="4" Grid.Column="0" Clicked="OnButtonClicked_mul" /> <!-- Multiplication button placement -->
+    <Button Text = "1" Grid.Row="4" Grid.Column="1" Clicked="OnButtonClicked_1" /> <!-- Number 1 button placement.-->
+    <Button Text = "2" Grid.Row="4" Grid.Column="2" Clicked="OnButtonClicked_2" /> <!-- Number 2 button placement -->
+    <Button Text = "3" Grid.Row="4" Grid.Column="3" Clicked="OnButtonClicked_3" /> <!-- Number 3 button placement -->
 
-    <Button Text = "÷" Grid.Row="5" Grid.Column="0" Clicked="OnButtonClicked_div" />
-    <Button Text = "." Grid.Row="5" Grid.Column="1" Clicked="OnButtonClicked_dot" />
-    <Button Text = "0" Grid.Row="5" Grid.Column="2" Clicked="OnButtonClicked_0" />
-    <Button Text = "±" Grid.Row="5" Grid.Column="3" Clicked="OnButtonClicked_plus_minus" />
+    <Button Text = "÷" Grid.Row="5" Grid.Column="0" Clicked="OnButtonClicked_div" /> <!-- Division button placement -->
+    <Button Text = "." Grid.Row="5" Grid.Column="1" Clicked="OnButtonClicked_dot" /> <!-- Decimal button placement -->
+    <Button Text = "0" Grid.Row="5" Grid.Column="2" Clicked="OnButtonClicked_0" /> <!-- Number 0 button placement -->
+    <Button Text = "±" Grid.Row="5" Grid.Column="3" Clicked="OnButtonClicked_plus_minus" /> <!-- Plus/Minus button placement -->
 
   </Grid>
 </ContentPage>
