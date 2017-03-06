@@ -7,15 +7,20 @@
 
   <ContentPage.Resources>
     <ResourceDictionary>
+      <Style x:Key="baseBackgroundStyle" TargetType="Background">
+        <Setter Property="BackgroundColor" Value="null"/>
+      </Style>
+
       <Style x:Key="yellowBackgroundColor" TargetType="Background"
-      BaseResourceKey="backgroundColor">
+            BasedOn="{StaticResource baseBackgroundStyle}">
         <Setter Property="BackgroundColor" Value="Yellow" />
       </Style>
+
       <Style x:Key="blueBackgroundColor" TargetType="Background"
-      BaseResourceKey="backgroundColor">
+                BasedOn="{StaticResource baseBackgroundStyle}">
         <Setter Property="BackgroundColor" Value="Blue" />
       </Style>
-      
+
     </ResourceDictionary>
   </ContentPage.Resources>
 
@@ -66,8 +71,9 @@
     <Button Text = "0" Grid.Row="5" Grid.Column="2" Clicked="OnButtonClicked_0" />
     <Button Text = "±" Grid.Row="5" Grid.Column="3" Clicked="OnButtonClicked_plus_minus" />
 
-    <Button Text="Style One" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="0" Clicked="OnButtonClicked_StyleYellow" />
-    <Button Text="Style Two" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="2" Clicked="OnButtonClicked_StyleBlue" />
+    <Button Text="Style One" Grid.Row="6" Grid.Column="0" Clicked="OnButtonClicked_StyleYellow" />
+    <Button Text="Style Two" Grid.Row="6" Grid.Column="1" Clicked="OnButtonClicked_StyleBlue" />
+    <Button Text="Reset" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="2" Clicked="OnButtonClicked_Reset" />
 
   </Grid>
 </ContentPage>
