@@ -282,17 +282,17 @@ namespace CalculatorApp
         //Background style change
         void OnButtonClicked_StyleYellow(object sender, EventArgs args)
         {
-            Resources["backgroundStyle"] = Resources["yellowBackgroundColor"];
+            Resources["buttonStyle"] = Resources["yellowButtonColor"];
         }
 
         void OnButtonClicked_StyleBlue(object sender, EventArgs args)
         {
-            Resources["backgroundStyle"] = Resources["blueBackgroundColor"];
+            Resources["buttonStyle"] = Resources["blueButtonColor"];
         }
 
         void OnButtonClicked_Reset(object sender, EventArgs args)
         {
-            Resources["backgroundStyle"] = null;
+            Resources["buttonStyle"] = null;
         }
     }
 }
