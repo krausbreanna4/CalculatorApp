@@ -1,11 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:CalculatorApp"
-             x:Class="CalculatorApp.MainPage">
+             x:Class="CalculatorApp.MainPage"
+             xmlns:local="clr-namespace:CalculatorApp;assembly=CalculatorApp"
+             Padding="16">
 
-  <Label Text="Welcome to Xamarin Forms!"
-           VerticalOptions="Center"
-           HorizontalOptions="Center" />
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="baseButtonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="Red"/>
+      </Style>
 
+      <Style x:Key="yellowButtonColor" TargetType="Button"
+            BaseResourceKey="baseButtonStyle">
+        <Setter Property="TextColor" Value="Yellow" />
+      </Style>
+
+      <Style x:Key="blueButtonColor" TargetType="Button"
+                BaseResourceKey="baseButtonStyle">
+        <Setter Property="TextColor" Value="Blue" />
+      </Style>
+
+      <Style x:Key="newButtonStyle" TargetType="Button"
+              BaseResourceKey="buttonStyle">
+    
+      </Style>
+
+
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1.5*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+
+    <ContentView Padding="8" Grid.Row="0" Grid.ColumnSpan="4">
+      <Label x:Name="Output" Text="{Binding Output}" Grid.Column="0" XAlign="End">
+      </Label>
+    </ContentView>
+
+
+    <Button Text="DEL" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Clicked="OnButtonClicked_backspace" />
+    <Button Text="ENTER" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="2" Clicked="OnButtonClicked_enter" />
+
+    <Button Text = "+" Style="{StaticResource newButtonStyle}" Grid.Row="2" Grid.Column="0" Clicked="OnButtonClicked_plus" />
+    <Button Text = "7" Style="{StaticResource newButtonStyle}" Grid.Row="2" Grid.Column="1" Clicked="OnButtonClicked_7" />
+    <Button Text = "8" Style="{StaticResource newButtonStyle}" Grid.Row="2" Grid.Column="2" Clicked="OnButtonClicked_8" />
+    <Button Text = "9" Style="{StaticResource newButtonStyle}" Grid.Row="2" Grid.Column="3" Clicked="OnButtonClicked_9" />
+
+    <Button Text = "-" Style="{StaticResource newButtonStyle}" Grid.Row="3" Grid.Column="0" Clicked="OnButtonClicked_minus" />
+    <Button Text = "4" Style="{StaticResource newButtonStyle}" Grid.Row="3" Grid.Column="1" Clicked="OnButtonClicked_4" />
+    <Button Text = "5" Style="{StaticResource newButtonStyle}" Grid.Row="3" Grid.Column="2" Clicked="OnButtonClicked_5" />
+    <Button Text = "6" Style="{StaticResource newButtonStyle}" Grid.Row="3" Grid.Column="3" Clicked="OnButtonClicked_6" />
+
+    <Button Text = "*" Style="{StaticResource newButtonStyle}" Grid.Row="4" Grid.Column="0" Clicked="OnButtonClicked_mul" />
+    <Button Text = "1" Style="{StaticResource newButtonStyle}" Grid.Row="4" Grid.Column="1" Clicked="OnButtonClicked_1" />
+    <Button Text = "2" Style="{StaticResource newButtonStyle}" Grid.Row="4" Grid.Column="2" Clicked="OnButtonClicked_2" />
+    <Button Text = "3" Style="{StaticResource newButtonStyle}" Grid.Row="4" Grid.Column="3" Clicked="OnButtonClicked_3" />
+
+    <Button Text = "÷" Style="{StaticResource newButtonStyle}" Grid.Row="5" Grid.Column="0" Clicked="OnButtonClicked_div" />
+    <Button Text = "." Style="{StaticResource newButtonStyle}" Grid.Row="5" Grid.Column="1" Clicked="OnButtonClicked_dot" />
+    <Button Text = "0" Style="{StaticResource newButtonStyle}" Grid.Row="5" Grid.Column="2" Clicked="OnButtonClicked_0" />
+    <Button Text = "±" Style="{StaticResource newButtonStyle}" Grid.Row="5" Grid.Column="3" Clicked="OnButtonClicked_plus_minus" />
+
+    <Button Text="Style One" Style="{StaticResource yellowButtonColor}" Grid.Row="6" Grid.Column="0" Clicked="OnButtonClicked_StyleYellow" />
+    <Button Text="Style Two" Style="{StaticResource blueButtonColor}" Grid.Row="6" Grid.Column="1" Clicked="OnButtonClicked_StyleBlue" />
+    <Button Text="Reset" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="2" Clicked="OnButtonClicked_Reset" />
+
+  </Grid>
 </ContentPage>
